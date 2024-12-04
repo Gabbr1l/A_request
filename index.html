@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="indexx.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="icon" href="Coracao.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+  <title>Love u!</title>
+    
+</head>
+
+
+<body>
+    <div class= "pai">
+    <div class = 'conteudo'>
+      
+    <h1>Let me be your coffee pot?</h1>
+    <button class = 'btn' onclick="sim()">Wanna be yours!!</button>
+    <button class = 'btn' onclick = "desvia(this)" onmouseover="desvia(this)">No</button>
+    </div>
+    <img class = 'image' src="Home.png" alt="Minha imagem" width="300" height="200">
+    <audio src=iwannabeyours.mp3 autoplay>
+    </audio>
+</body>
+
+<script>  
+    function sim(){
+      location.href = "https://api.whatsapp.com/send?phone=5575998792762&text=%20%E2%9D%A4%EF%B8%8F"
+    }
+    function desvia(t){
+      var btn = t;
+      btn.style.position = 'absolute';
+      btn.style.top = gerarposicao(10,90);
+      btn.style.right = gerarposicao(10,90);
+      console.log("desviei."); 
+    }
+    function gerarposicao(min, max) {
+      return (Math.random() * (max - min) + min) + "%";
+    }
+    
+</script>
+</html>
